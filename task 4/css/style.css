@@ -1,0 +1,158 @@
+
+/* setting */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    color: #292929;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+    color: #292929;
+}
+ul {list-style: none;}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.outline {outline: 1px solid #f00;}
+
+
+/*-------------------------------------------------------- top banner */
+.top-banner {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 60px 0;
+}
+
+/* box-1 & box-2 */
+.banner-boxes{
+    display: flex;
+    align-items: center;
+}
+
+/* first box */
+.logo-img{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.logo-desc,
+.phone-desc{
+    font-size: 11px;
+    color: #969696;
+}
+
+/* second box */
+.banner-box-2 {
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+.phone-content{
+    text-align: right;
+    margin-right: 30px;
+}
+.phone-number{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+}
+.call-back{
+    display: inline-block;
+    padding: 13px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    border: 2px solid ;
+    transition: .2s;
+}
+.call-back:hover{
+    background: #ffcc00;
+    color: #fff;
+    border-color: transparent;
+}
+
+
+
+
+/*-------------------------------------------------------- header */
+header{
+    height: 550px;
+    background: url(../img/header_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+header .container{
+    height: inherit;
+    position: relative;
+}
+
+/* nav */
+nav{
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: #ffcc00;
+}
+.nav-links{
+    display: inline-block;
+    padding: 20px 0;
+    font-weight: 700;
+    transition: .2s;
+}
+.nav-links:hover{color: #fff;}
+
+/* delivey */
+.delivery-content{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.delivery-logo{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+.delivery-desc{
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 65px;
+}
+.delivery-btn-content {
+    display: flex;
+}
+.delivey-btn{
+    display: inline-block;
+    padding: 20px 30px;
+    background: #ffcc00;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .2s;
+}
+.delivey-btn:last-of-type{
+    margin-left: 30px;
+    color: #fff;
+    background: transparent;
+}
+.delivey-btn:last-of-type:hover{
+    background: #ffcc00;
+    color: #292929;
+}

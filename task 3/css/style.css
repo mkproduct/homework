@@ -1,0 +1,182 @@
+
+/* setting */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{height: 100vh;}
+a{text-decoration: none;}
+ul {list-style: none;}
+
+.container{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+/* arrow for link */
+.arrow{
+    display: inline-block;
+    margin-left: 10px;
+    border: 5px solid;
+    border-color: #fff transparent transparent transparent;
+}
+.text-orange{color:#fca505;}
+.outline {outline: 1px solid #f00;}
+
+
+/*-------------------------------------------------------- header */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0E0D21;
+    z-index: 10;
+}
+/* navigation */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Logotype h2 */
+.nav-logo{
+    flex: 1;
+    color:#fff;
+}
+
+/* content menu */
+.top_menu_content {
+    width: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+.top_menu_content > li {position: relative;}
+
+/*content links */
+.content_link {
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    transition: .2s;
+}
+.content_link:hover{color: #fca505}
+.content_link:hover .arrow{border-color: #fac505 transparent transparent transparent;}
+
+
+
+/* inner content */
+.inner_content{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    height: 0;
+    border-top: 2px solid transparent;
+    overflow: hidden;
+    transition: .3s;
+}
+.top_menu_content > li:hover .inner_content {
+    border-color: #fca505;
+    height: auto;
+    background:rgba(0,0,0, .5);
+}
+
+/* inner links */
+.inner_link{
+    display: block;
+    padding: 10px;
+    color: #fff;
+    transition: .2s;
+    border-bottom: 1px solid rgba(255,255,255, .3);
+}
+.inner_content > li:last-of-type a{border-bottom-color: transparent;}
+.inner_link:hover {
+    padding-left: 20px;
+    color: #fca505;
+    background:rgba(0,0,0, .1);
+}
+
+
+
+/* --------------------------------------------------------main */
+main {
+    background: #242627;
+    padding: 200px 0;
+}
+
+/* main common cotent */
+.our-page {
+    display: flex;
+    align-items: center;
+}
+
+/* basic content */
+.basic-content{
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+/* basic content description */
+.basic-desc {
+    padding: 0 20px;
+}
+.desc-logo{
+    font-size: 32px;
+    padding: 0 15px;
+    border-left: 5px solid ;
+}
+.desc-logo,
+.desc-btn,
+.list-link {
+    text-transform: uppercase;
+    color: #121212;
+    font-weight: 700;
+}
+.desc-porography{
+    padding: 30px 0;
+    color: #343434
+}
+.desc-btn{
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid;
+    font-size: 14px;
+    transition: .3s
+}
+.desc-btn:hover {color: #fca505;}
+
+/* basic content block img */
+.basic-img-content img{
+    display: block;
+    width: 370px;
+    height: 390px;
+}
+
+/* right sidebar  */
+.main-sidebar{
+    margin-left: 50px;
+}
+.sidebar-list li{
+    display: block;
+    margin: 20px 0;
+}
+.list-link{
+    display: block;
+    padding: 15px 30px;
+    background: #fff;
+    white-space: nowrap;
+    text-align: center;
+    transition: .3s;
+}
+.list-link:hover{color: #fca505}
+
+/* footer */
+.copyRight{
+    padding: 20px 10px;
+    text-align: center;
+}
