@@ -1,0 +1,136 @@
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body{
+	padding: 10px;
+}
+.container{
+	background: #263238;
+}
+
+.boxes{
+	outline: 1px solid #f00;
+	min-height: 200px;
+	min-width: 200px;
+	background: #E7EAED;
+
+	font-weight: 700;
+	font-size: 20px;
+}
+img{
+	display: inline-block;
+	width: 300px;
+}
+
+
+
+/*flex adn inline-flex*/
+.container{
+	display: flex;
+	/*display: inline-flex;*/
+	/*width: 600px;*/
+}
+
+
+
+
+/*direction*/
+.container{
+	/*flex-direction: row-reverse;*/
+	/*flex-direction: column;	*/
+	/*align-items: flex-start;*/
+	/*flex-direction: column-reverse;*/
+}
+
+
+/*justify*/
+.container{
+	/*justify-content: space-around;*/
+	 /*justify-content: space-between; */
+}
+
+
+
+
+/*align-items / content*/
+.container{
+	/* flex-start center flex-end*/
+	/*align-items: center;*/
+	/*height: 600px;*/
+}
+
+
+/*flex-wrap   /*align-contetn space-aroud space-between*/
+.container{
+	/*flex-wrap: wrap;*/
+}
+
+.container{
+	/*height: 600px;*/
+	/*align-content: space-around;*/
+	/*align-content: space-between;*/
+}
+
+
+
+
+.container{
+	height: 600px;
+}
+/*align-self*/
+.last-box{
+	/*flex-start center flex-end*/
+	/*align-self: center; */
+}
+
+
+
+
+
+/*order*/
+.last-box{
+	/*0 default*/
+	/*order: -1; */
+}
+
+
+
+
+
+/*flex grow*/
+.container{
+	/*justify-content: space-around;*/
+}
+.last-box{
+	/*default 0*/
+	/*flex-grow: 1;*/
+}
+
+
+
+
+
+/*flex shrink*/
+.last-box{
+	/*default 1*/
+	/*flex-shrink: 2;*/
+}
+.boxes{
+	/*min-width: auto;*/
+}
+
+
+/*flex basis*/
+.container{
+	/*flex-wrap: wrap;*/
+}
+.last-box{
+	/*flex-basis: 400px;*/
+}
+
+
+
+
