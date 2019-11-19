@@ -12,7 +12,7 @@
 
 // url 
 // name  указываем url address
-// если имя одинаковие то попат аддресс обнавляестся
+// если имя одинаковие то попат аддресс обновляестся
 
 // function func2(){
 	// для url, src / name / params
@@ -24,38 +24,11 @@
 
 
 
-// ==================================	хоистинг & замыкание
-/*
-let a=5;
-
-function func1(){
-	let a=2;
-	function func2(){
-		let b=6;
-		console.log(a= b);
-	}
-	func2();
-}
-func1()
-
-*/
 
 
 
 
-/*
-let m = func1();
 
-function func1(){
-	let i=0;
-	// console.log(i);
-	return function(){
-		i++;
-		console.log(i);
-	}
-}
-m();
-*/
 
 
 

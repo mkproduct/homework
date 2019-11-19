@@ -1,123 +1,66 @@
 
  // ==================================	print array with recursion
 
-
-
 	 // i = 0	1	2	3	4	5
 // length = 5	5	5	5	5	5
 // array=	0	1	2	3	4	
 
-/*let arr = ['K','M', 9, 10, 8991];
-console.log(arr.length)
+// let arr = ['K','M', 9, 10, 8991];
+// // console.log(arr.length)
 
-print(arr, 0);
+// print(arr, 0);
 
-function print(arr, i){
-	if (i<arr.length){
-		console.log(i + ' < ' + arr.length);
-		// console.log(arr[i])
-		// console.log(`${i} < ${arr.length} = ${i<arr.length}`);
-		i++;
-		print(arr, i)
-	}
-}
-*/
-
-/*
-console.log(i + ' < ' + arr.length + ' = ' + i<arr.length)
-console.log(`${i} < ${arr.length} = ${i<arr.length}`);
-
-*/
+// function print(arr, i){
+// 	if (i<arr.length){
+// 		// console.log(i + ' < ' + arr.length);
+// 		// console.log(arr[i])
+// 		i++;
+// 		print(arr, i)
+// 	}
+// }
 
 
- // ==================================	this call apply
-/*
-function func(){
-	console.log(this);
-}
-let obj = {
-	objElmt: func
-}
-// ключевая слова this указывает тот объект который было вазвано
- window.func()
- obj.show()
-*/
+
+// ==================================	хоистинг
 
 
-	// this
-// console.log(this);
-// console.log(this.innerWidth);
+// отличия применов
 
+// console.log(c);
+// var a = 5;
+// let b = 5;
+// const c = 5;
+
+// console.log(c = 'ml');
+
+
+
+	// scope функции
+
+// let a=5;
+
+// function func1(){
+// 	let a=2;
+// 	function func2(){
+// 		let b=6;
+// 		// console.log(a + b);
+// 	}
+// 	func2();
+// }
+// func1()
+
+
+
+// let a = '';
 // function func(){
-// 	console.log(this)
+// 	t = 8;
+// 	// a = t
+// 	console.log(t)
 // }
-// func();
+// func()
+// // console.log(a)
 
 
-// let btn=document.querySelector('button').onclick=func;
-// function func(){
-// 	console.log(this);
-// 	this.style.transition = '.5s';
-// 	this.style.fontSize = '50px';
-// }
-
-
-
-	// call
-
-// function show(){
-// 	console.log(this.firstName, this.lastName);
-// }
-// let obj = {
-// 	firstName: 'Muhammad',
-// 	lastName: 'Kuysunov'
-// }
-// show.call(obj)
-
-
-
-	// args
-// note: аргументы которые во внутри
-// '' - обозначает строку можно и без '' если это число.
-
-/*
-function show(a, b, c){
-	console.log(this[a], this[b], this[c]);
-}
-let obj = {
-	firstName: 'Muhammad',
-	lastName: 'Kuysunov',
-	age: 21
-}
-show.call(obj, 'firstName', 'lastName', 'age');
-*/
-
-
-	// bind
-/*function show (a) {
-	console.log(this.a + this[a])
-}
-let cfc = {
-	b: 4,
-	a: 13
-}
-
-show.bind(cfc, 'b')()
-
-*/
-
-
-
-	// apply
-// let user = {
-// 	firstName: 'Muhammad',
-// 	lastName: 'Kuysunov',
-// 	age: 5 
-// }
-// function show(a){
-// 	console.log(this.firstName, this.lastName, this[a]);
-// }
-// show.apply(user, ['age']);
 
 
 
