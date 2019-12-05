@@ -186,6 +186,7 @@ console.log(myObject.a);
 когда хотим создат или изменит в ручную свойтво объекта при этом имея раширенный вариант параметров
 с помощю дескрипторов
 
+
 Object.defineProperty(objName, "property",{
     enumerable: false, отвечает за (активность) прозрачность 
     writable: false,    для читение изминение
