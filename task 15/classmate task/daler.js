@@ -1,5 +1,5 @@
 
-/* 
+
 
 var i = 0;
 var box = 'Пусто';
@@ -55,5 +55,5 @@ Player.play();
 Player.next();
 Player.next();
 Player.prev();
- */
+
 
