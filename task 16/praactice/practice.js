@@ -1,3 +1,82 @@
+// ========================================
+// my variant
+
+var Player = {
+    list: [],
+    name: "player",
+    currentItem: 0,
+    played: false,
+
+    next: function () {
+
+    },
+    prev: function () {
+
+    },
+    getCurrent: function () {},
+    play: function () {},
+    addToList: function (listItem) {}
+};
+
+
+// var VideoPlayer = Object.create(Player);
+// VideoPlayer.list = [];
+
+var VideoPlayer = {
+        list: [],
+        uploadToYoutube: function (name) {
+
+        }
+    },
+    playFromYoutube: function (item) {},
+    // __proto__: Player, вместо прото исползывал  set..Of
+}
+Object.setPrototypeOf(VideoPlayer, Player);
+
+
+
+VideoPlayer.addToList({
+    name: "Shashmaqom",
+    year: 2000,
+    duration: "3,2m",
+    authot: "Tajik National"
+});
+
+VideoPlayer.uploadToYoutube("Jazz");
+// console.log(VideoPlayer);
+
+// console.log(Player);
+// console.log("Player list:", Player.list);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ============================================================================
 // teacher task
 /* 
@@ -91,52 +170,4 @@ VideoPlayer.uploadToYoutube("Shashmaqom"); */
 
 
 
-// ========================================
-// my variant
 
-var Player = {
-    list: [],
-    name: "player",
-    currentItem: 0,
-    played: false,
-
-    next: function () {
-
-    },
-    prev: function () {
-
-    },
-    getCurrent: function () {},
-    play: function () {},
-    addToList: function (listItem) {}
-};
-
-
-// var VideoPlayer = Object.create(Player);
-// VideoPlayer.list = [];
-
-var VideoPlayer = {
-        list: [],
-        uploadToYoutube: function (name) {
-
-        }
-    },
-    playFromYoutube: function (item) {},
-    // __proto__: Player, вместо прото исползывал  set..Of
-}
-Object.setPrototypeOf(VideoPlayer, Player);
-
-
-
-VideoPlayer.addToList({
-    name: "Shashmaqom",
-    year: 2000,
-    duration: "3,2m",
-    authot: "Tajik National"
-});
-
-VideoPlayer.uploadToYoutube("Jazz");
-// console.log(VideoPlayer);
-
-// console.log(Player);
-// console.log("Player list:", Player.list);
