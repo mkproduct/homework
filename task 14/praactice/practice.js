@@ -71,7 +71,7 @@
 1) Создасть новый пустой объект
 2) Сконструированный объект связывается с [[прототипом]]
 3) Контекст this указывает на сконструированный объект
-4) за исключение когда функсия вернет свой алтернативный объект, контрукто new вернет сконструированного объекта
+4) за исключение когда функсия вернет свой алтернативный объект, конструктор new вернет сконструированного объекта
 
 function Foo(){}
 var a1 = new Foo();
@@ -153,15 +153,15 @@ console.log(baz.a);
 до так называемы глобалный объекта Object.prototypr!
  */
 
-/* 
-var anotherObj = {
+
+/* var anotherObj = {
     a: 2,
 };
 var myObject = Object.create(anotherObj);
+
 for(var key in myObject) {
     console.log(key, myObject[key]);
-}
-*/
+} */
 
 
 /* Затенение свойствь=========================
@@ -177,6 +177,79 @@ var myObject = {
     __proto__: anotherObj,
 } 
 console.log(myObject.a);
+ */
+
+
+
+// Object.create================================
+/* 
+    Object.create создает новый объект(baz)
+    и связовается с объектом которую указали(bar) 
+*/
+
+/* 
+var bar = {
+    foo: function() {
+        console.log('It\'s work');
+    }
+}
+
+var baz = Object.create(bar);
+baz.foo();
+ */
+
+
+
+/* 
+Прмечание: Object.create(null) - создает пустой объект 
+с пустой ссылкой на [[prototype]] без цепоски
+*/
+
+/* 
+var bar = Object.create(null);
+console.log(bar); --> No prototies
+ */
+
+/* 
+Второй аргуменнт Object.create для создание 
+свойств  с помощю дескрипторов
+ */
+
+/*  
+var bar = {
+    a: 2,
+};
+var baz = Object.create(bar, 
+    {
+        b: {
+            enumerable: true,
+            writable: true,
+            configurable: true,
+            value: 5
+        },
+        c: {
+            enumerable: true,
+            writable: true,
+            configurable: true,
+            value: 10,
+        },
+    });
+console.log(baz)
+*/
+
+/* 
+// enumerable===================
+var obj = {
+    a: 5,
+}
+Object.defineProperty(obj, "a", {
+    enumerable: false,
+
+})
+var obj2 = Object.create(obj);
+for (var prop in obj2) {
+    console.log(prop, obj[prop]);
+}
  */
 
 
@@ -231,60 +304,7 @@ console.log(a.myLabel());
  */
 
 
-// Object.create================================
-/* 
-    Object.create создает новый объект(baz)
-    и связовается с объектом которую указали(bar) 
-*/
 
-/* 
-var bar = {
-    foo: function() {
-        console.log('It\'s work');
-    }
-}
-
-var baz = Object.create(bar);
-baz.foo();
- */
-
-
-
-/* 
-Прмечание: Object.create(null) - создает пустой объект 
-с пустой ссылкой на [[prototype]] без цепоски
-*/
-/* 
-var bar = Object.create(null);
-console.log(bar); --> No prototies
- */
-
-/* 
-Второй аргуменнт Object.create для создание 
-свойств  с помощю дескрипторов
- */
-
-/*  
-var bar = {
-    a: 2,
-};
-var baz = Object.create(bar, 
-    {
-        b: {
-            enumerable: true,
-            writable: true,
-            configurable: true,
-            value: 5
-        },
-        c: {
-            enumerable: true,
-            writable: true,
-            configurable: true,
-            value: 10,
-        },
-    });
-console.log(baz)
-*/
 
 /* 
 // Наследование ==================================
@@ -376,30 +396,60 @@ console.log(b2.speak())
 
 
 
+/* 
+
+
+arr = [];
+function range(a, b) {
+	var i = 0;
+	if(a < b){
+        for (i = a; i <= b; i++) {
+            arr.push(i);
+        }
+    }else{
+        for (i = b; i <= a; a--) {
+            arr.push(a);
+        }
+    }
+    console.log(arr)
+    
+}
+
+function sum(){
+    range(10, 9);
+    var box = 0;
+    for(var prop in arr){
+        console.log(box += arr[prop])
+    }
+}
+sum()
+*/
+/* 
+var device = {
+    width: 200,
+    weight: 200,
+    height: "50kg"
+}
+
+var phone = {
+    camera: "8px"
+}
+
+Object.setPrototypeOf(phone, device);
+
+phone.width = 0;
+phone.weight = 0;
+phone.height = 0;
+
+for (var k in phone){
+    console.log(phone);
+}
+
+
+ */
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 

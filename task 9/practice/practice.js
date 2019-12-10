@@ -13,20 +13,99 @@
 
 
 
-// Жесткое указание с помощю call
-// function foo(num) {
-//     console.log("foo " + num);
-//     this.count++;
-// }
-// foo.count = 0
+ // ============================
 
-// var i;
-// for(i = 0; i<10; i++) {
-//     if(i>5) {
-//         foo.call(foo, i)
-//     }
-// }
-// console.log(foo.count)
+/* 
+// влияние use strict
+
+// "use strict"
+function foo() {
+    console.log(this.a);
+}
+var a = 2;
+
+function bar() {
+    "use strict"
+    foo();
+} 
+bar();
+ */
+
+// ============================
+
+// Явное указание
+/* 
+function foo() {
+    console.log(this.a);
+}
+
+var obj1 = {
+    a: 42,
+    foo: foo,
+}
+
+obj1.foo();
+ */
+
+// ============================
+
+// Ссылаесмся и тут же вызаваем
+/* 
+function foo() {
+    console.log(this.a);
+}
+
+var obj1 = {
+    a: 42,
+    foo: foo,
+}
+
+var obj2 = {
+    a: 2,
+    foo: obj1.foo,
+}
+
+obj2.foo(); */
+
+// ============================
+
+// Точка состояние вызыова
+/* 
+function foo() {
+    console.log(this.a);
+}
+
+var obj = {
+    a: 42,
+    foo: foo,
+}
+
+var obj2 = {
+    a: 2,
+    foo2: foo,
+}
+
+var a ="ой глобальная";
+
+// obj.foo();
+var bar = obj.foo;
+bar();
+ */
+
+
+//  ==============================Жесткое указание call
+
+/* 
+function foo() {
+	this.count++;
+	console.log(this.count);
+}
+foo.count = 0
+
+for(var i = 0; i<5; i++) {
+    foo.call(foo)
+}
+ */
 
 //  ========================примичание!
 /* 
@@ -44,102 +123,10 @@ foo.call(null, 10)
 console.log(a);
  */
 
-// ============================
-
-// влияние use strict
-
-// function foo() {
-//     console.log(this.a);
-// }
-// var a = 2;
-
-// function bar() {
-//     "use strict"
-//     foo();
-// } 
-// bar();
-
-// ============================
-
-// Явное указание
-
-// function foo() {
-//     console.log(this.a);
-// }
-
-// var obj1 = {
-//     a: 42,
-//     foo: foo,
-// }
-
-// obj1.foo();
-
-// ============================
-
-// Ссылаесмся и тут же вызаваем
-
-// function foo() {
-//     console.log(this.a);
-// }
-
-// var obj1 = {
-//     a: 42,
-//     foo: foo,
-// }
-
-// var obj2 = {
-//     a: 2,
-//     obj: obj1,
-// }
-
-// obj2.obj.foo();
-
-// ============================
-
-// Точка состояние вызыова
-
-// function foo() {
-//     console.log(this.a);
-// }
-
-// var obj = {
-//     a: 42,
-//     foo: foo,
-// }
-
-// var obj2 = {
-//     a: 2,
-//     foo2: foo,
-// }
-
-// var a ="ой глобальная";
-
-// obj.foo();
-// var bar = obj.foo;
-// bar();
-
-// ============================
-
-// function foo() {
-// 	console.log(this.a);
-// }
-// var obj = {
-// 	a: 2,
-// 	foo: foo,
-// };
-
-// var a = "ой глобалная";
-
-// setTimeout(obj.foo(), 100);
-
-
-
-
-// call ==============================Жесткое указание
-
+//  =================================call on object
 /* 
 function show(){
-	// console.log(this.firstName, this.lastName);
+	console.log(this.firstName, this.lastName);
 	// console.log(this[0], this[1]);
 	// console.log(this)
 }
@@ -149,32 +136,29 @@ let user = {
 	firstName: 'John',
 	lastName: 'Smith'
 }
-// show.call(user);
+show.call(user);
 
 // обращаемся к массиву
-let arr = ['elem1', 55];
+// var arr = ['elem1', 55];
 // show.call(arr)
 
 // обращаемся к переменую
-let ml = 61;
+// let ml = 61;
 // show.call(ml);
  */
 
 
-
 // args
-
 /* 
 function show(a, b, c){
 	console.log(this[a], this[b], c);
 }
-let user = {
+var user = {
 	firstName: 'alem1',
 	lastName: 'alem2',
 }
 show.call(user, 'firstName', 'lastName', 95);
  */
-
 
 
 // bind=======================================
@@ -186,10 +170,11 @@ let user = {
 	b: 4,
 	a: 13
 }
-show.bind(user, 'b');
+show.bind(user, 'b')(); <---
 show() --> undefined
  */
 
+ 
 /* 
  function show(b) {
  	console.log(this.a + this[b]);
@@ -201,7 +186,6 @@ show() --> undefined
  var start = show.bind(user, 'b');
  start()
  */
-
 
 // apply=======================================
 

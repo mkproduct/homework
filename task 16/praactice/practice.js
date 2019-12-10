@@ -77,7 +77,6 @@ VideoPlayer.uploadToYoutube("Jazz");
 
 
 
-
 // Update variant 2 ====================================================
 
 var buttons = {
@@ -159,5 +158,20 @@ VideoPlayer.addToList({
     authot: "Foregn Music"
 });
 
-console.log(VideoPlayer);
-console.log(Player);
+// console.log(VideoPlayer);
+// console.log(Player);
+var arr =[a, b, c]
+ ownjoin("+") = "a,b,c"
+
+"abc"
+
+var str = "abc";
+
+str.ownsplit("c")
+
+var str = "abubakr11111";
+
+console.log(str.split("1"));
+
+
+
