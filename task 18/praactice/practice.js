@@ -109,11 +109,3 @@ try {
 } */
 
 
-
-
-
-new Promise((resolve, reject) => {
-        setTimeout(() => resolve("result"), 2000)
-    })
-    .finally(() => alert("Промис завершён"))
-    .then(result => alert(result)); // <-- .then обработает результат
