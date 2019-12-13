@@ -1,16 +1,10 @@
-
-
-
-
-
-
 async function f(src, src2, src3) {
 
     var img = document.createElement('img');
     var img2 = document.createElement('img');
     var img3 = document.createElement('img');
 
-    var getSrc = new Promise(function(resolve, reject){
+    var getSrc = new Promise(function (resolve, reject) {
         setTimeout(function () {
             img.src = src;
             img.onload = function () {
@@ -28,7 +22,7 @@ async function f(src, src2, src3) {
 
 
 
-    var getSrc2 = new Promise(function(resolve, reject){
+    var getSrc2 = new Promise(function (resolve, reject) {
         setTimeout(function () {
             img2.src = src2;
             img2.onload = function () {
@@ -37,7 +31,7 @@ async function f(src, src2, src3) {
             img2.onerror = function () {
                 reject(new Error("error on " + src));
             }
-            
+
         }, 1000);
     });
     var wait2 = await getSrc2;
@@ -45,7 +39,7 @@ async function f(src, src2, src3) {
 
 
 
-    var getSrc3 = new Promise(function(resolve, reject){
+    var getSrc3 = new Promise(function (resolve, reject) {
         setTimeout(function () {
             img3.src = src3;
             img3.onload = function () {
@@ -54,15 +48,15 @@ async function f(src, src2, src3) {
             img3.onerror = function () {
                 reject(new Error("error on " + src));
             }
-            
+
         }, 1000);
     });
     var wait3 = await getSrc3;
     document.body.prepend(wait3);
-    
- }
 
- f("./img/1.jpg", "./img/2.jpg", "./img/3.jpg");
+}
+
+f("./img/1.jpg", "./img/2.jpg", "./img/3.jpg");
 
 
 
@@ -71,12 +65,10 @@ async function f(src, src2, src3) {
 /* 
 // цепочка
 function showImg(src) {
-
    return  new Promise(function(resolve, reject) {
         var img = document.createElement('img');
         
         img.src = src;
-
         img.onload = function () {
             resolve("img downloaded");
         }
@@ -84,11 +76,9 @@ function showImg(src) {
         img.onerror = function() {
             reject(new Error("error on " + src));
         }
-
         document.body.prepend(img)
     })
  }
-
  showImg("./img/1.jpg")
  .then(function(){
      return showImg("./img/2.jpg")
@@ -96,22 +86,4 @@ function showImg(src) {
  .then(function(){
      return showImg("./img/3.jpg")
  }) 
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

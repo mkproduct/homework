@@ -1,7 +1,6 @@
+
 /* 
-
 var str = "abubakr";
-
 String.prototype.ownsplit = function (sperator) {
     var arr = [];
     var gab = [];
@@ -21,7 +20,6 @@ String.prototype.ownsplit = function (sperator) {
 
 
 /* var arr = [1, 2, 3, 4, 5];
-
  Array.prototype.reverseArr = function () {
      var t;
      for (var k = 0, i = ths.length - 1; k < i; k++, i--) {
@@ -46,12 +44,10 @@ var name = "John;Smith";
 var nameArr = name.split(';');
 console.log(name);
 console.log(nameArr);
-
 var testArr = ["Вася", "Петя"];
 var testStr = testArr.join(' ')
 console.log(testArr);
 console.log(testStr);
-
  */
 
 
@@ -90,7 +86,6 @@ function first () {
 function second () {
     console.log(2);
 }
-
 first();
 second();
  */
@@ -98,22 +93,18 @@ second();
 function loadScript(src, callback) {
     var script = document.createElement("script");
     script.src = src;
-
     script.onload = function () {
         callback(null, script)
     };
     script.onerror = function() {
         callback(new Error())
     }
-
     document.head.append(script);
 }
-
 loadScript("testFile.js", function () {
     loadScript("testFile2.js", function () {
         loadScript("testFile3.js", function () {
             loadScript("testFile4.js", function () {
-
             });
         });
     });
@@ -125,19 +116,15 @@ loadScript("testFile.js", function () {
 function loadScript(src, callback) {
     var script = document.createElement("script");
     script.src = src;
-
     script.onload = function () {
         callback()
     };
     script.onerror = function () {
         callback(new Error())
     }
-
     document.head.append(script);
 }
-
 loadScript("testFile.js", step1);
-
 function step1(){
     loadScript("testFile2.js", step2);
 }
@@ -155,25 +142,20 @@ function step3(){
 // promise ================================================================================================================================================================================================================================
 
 /* 
-
 // цепоска для скриптов
-
 function loadScript(src) {
     return new Promise(function (resolve, reject) {
         var script = document.createElement('script');
         script.src = src;
-
         script.onload = function () {
             resolve(script);
         }
         script.onerror = function () {
             reject(new Error("Ошибка в " + src));
         }
-
         document.head.append(script);
     });
 }
-
 var promise = loadScript("testFile.js")
 .then(function () {
     return loadScript("testFile2.js")
@@ -182,13 +164,11 @@ var promise = loadScript("testFile.js")
 }).then(function () {
     loadScript("testFile4.js");
 });
-
  */
 
 
 /* 
 var isMomHappy = true;
-
 var test = new Promise(function(resolve, reject){
     if(isMomHappy){
         var phone = {
@@ -201,13 +181,11 @@ var test = new Promise(function(resolve, reject){
         reject(reason);
     }
 });
-
 test.then(function(fulfilled){
     console.log(fulfilled);
 }).catch(function (error) {
     console.log(error);
 });
-
 */
 
 
@@ -215,7 +193,6 @@ test.then(function(fulfilled){
 
 /* 
 // Цепочка по промису
-
  new Promise(function(resolve, reject){
      setTimeout(function(){
          resolve(2);
@@ -244,7 +221,6 @@ test.then(function(fulfilled){
  }, null).then(function (fulfilled){
      console.log(fulfilled);
  });
-
  */
 
 /* 
@@ -252,7 +228,6 @@ test.then(function(fulfilled){
 var promise = new Promise(function (resolve, reject) {
     resolve(1);
 });
-
 promise.then(function(fulfilled){
     console.log(fulfilled)
     return fulfilled * 5;
@@ -284,9 +259,7 @@ fn().then(function(fulfilled){
             }
         }, 2000)
     });
-
     var wait = await promise;
-
     console.log(wait)
     
 }
@@ -303,9 +276,6 @@ var promise = loadScript("testFile.js")
     }).then(function () {
         loadScript("testFile4.js");
     });
-
  */
 
 
-
- 
