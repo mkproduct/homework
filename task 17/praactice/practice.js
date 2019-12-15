@@ -141,7 +141,6 @@ function step3(){
 
 // promise ================================================================================================================================================================================================================================
 
-/* 
 // цепоска для скриптов
 function loadScript(src) {
     return new Promise(function (resolve, reject) {
@@ -164,7 +163,6 @@ var promise = loadScript("testFile.js")
 }).then(function () {
     loadScript("testFile4.js");
 });
- */
 
 
 /* 
